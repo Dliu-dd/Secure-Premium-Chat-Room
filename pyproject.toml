@@ -1,0 +1,22 @@
+[project]
+name = "Personal-Secure-Premium-Chat-Room"
+version = "0.1.0"
+authors = [
+    {name = "Curious-000-Curious",email = "curious.000.curious@gmail.com"}
+]
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "pydantic (>=2.11.9,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "app"}]
+
+[tool.poetry.scripts]
+server = "app.server:main"
+client = "app.client:main"
+chatroom = "app.chatroom:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
